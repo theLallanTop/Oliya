@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-
-export default class Home extends Component {
+import styles from './HomeStyle';
+class Home extends Component {
 
   render() {
     return (
-      <View style={{flex:1, flexDirection:'column', alignItems:'center', justifyContent: 'center'}}>
+      <View style={styles.homeViewContainer}>
         <Text>Home Page</Text>
       </View>
     );
   }
 }
+export default Home;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Home } from './containers';
+import { Home, SignIn, SignUp } from './containers';
 import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
 import { Colors, Images } from './theme';
@@ -48,7 +48,9 @@ export default class AppRouter extends Component {
   render() {
     return (
       <Router navigationBarStyle={Styles.navBar} titleStyle={Styles.navTitle} hideNavBar>
-        <Scene key="home" component={Home} title="Oliya" hideNavBar={true}  />
+        <Scene key="home" component={Home} title="Oliya" hideNavBar={false} />
+        <Scene key="signin" component={SignIn} title="Sign In" hideNavBar={true} initial />
+        <Scene key="signup" component={SignUp} title="Sign Up" hideNavBar={true} />
       </Router>
     );
   }
