@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
-import createLogger from 'redux-logger';
+import { createLogger } from 'redux-logger';
 import {persistStore, autoRehydrate } from 'redux-persist';
 import { rehydrateStore } from '../helpers/RehydrationHelper';
 import reducer from './modules/reducer';

@@ -5,7 +5,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <View style={{flex:1,flexDirection:'column', alignItems:'center'}}>
+      <View style={{flex:1, flexDirection:'column', alignItems:'center', justifyContent: 'center'}}>
         <Text>Home Page</Text>
       </View>
     );

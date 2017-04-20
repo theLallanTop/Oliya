@@ -48,7 +48,7 @@ export default class AppRouter extends Component {
   render() {
     return (
       <Router navigationBarStyle={Styles.navBar} titleStyle={Styles.navTitle} hideNavBar>
-        <Scene key="home" component={Home} title="Suno Kahaani" hideNavBar={true}  />
+        <Scene key="home" component={Home} title="Oliya" hideNavBar={true}  />
       </Router>
     );
   }
