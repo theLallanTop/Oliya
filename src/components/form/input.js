@@ -91,13 +91,13 @@ export default class Input extends Component {
     </View>
   }
 
-  renderLineWhite(){
+  renderLineWhite = () => {
     return (
       <View style={styleInput.lineWhite}>
 
       </View>
     );
-  }
+  };
 
   renderInputWithIcon(){
     return(

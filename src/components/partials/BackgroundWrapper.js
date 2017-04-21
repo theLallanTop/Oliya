@@ -1,6 +1,10 @@
 import React, {Component, PropTypes} from 'react';
 import {
-  View, Image, Dimensions, TouchableOpacity, Platform
+  View,
+  Image,
+  Dimensions,
+  TouchableOpacity,
+  Platform
 } from 'react-native';
 import Icon from 'react-native-vector-icons/SimpleLineIcons';
 import {getStyleFromProps, getPlatformValue} from '../../utils';
@@ -58,7 +62,7 @@ BackgroundWrapper.propTypes = {
 const styleWrapper = {
   containerImage: {
     width: window.width,
-    height: window.height,
+    height: window.height - 22,
     resizeMode: getPlatformValue('android', 'cover', 'contain'),
     paddingTop: getPlatformValue('android', 5, 22),
   },

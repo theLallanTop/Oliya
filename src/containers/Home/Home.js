@@ -11,7 +11,7 @@ import {
 import { Button } from '../../components/form';
 import {Logo, BackgroundWrapper, AlertStatus} from '../../components/partials';
 import { Heading } from '../../components/text';
-
+import { Metrics } from '../../theme';
 import {Actions} from 'react-native-router-flux';
 import loginStyle from './HomeStyle';
 class Home extends Component {
@@ -72,14 +72,14 @@ class Home extends Component {
           </Animated.View>
           <Animated.View style={{position: 'relative', left: this.state.groupHeadingPositionLeft}}>
             <Heading marginTop={89} color="#ffffff" textAlign="center">
-              {'<React Viet Nam/>'}
+              {'Oliya'}
             </Heading>
             <Heading marginTop={16} element="h3" color="#ffffff" textAlign="center">
-              {'Animated in react'}
+              {'Oliya'}
             </Heading>
           </Animated.View>
-          <Animated.View style={{position: 'relative', left: this.state.buttonPositionLeft}}>
-            <Button marginTop={90} onPress={this.handePressSignIn}>
+          <Animated.View style={{position: 'relative', left: this.state.buttonPositionLeft, marginTop: 45}}>
+            <Button marginTop={90} width={460} onPress={this.handePressSignIn}>
               Sign in
             </Button>
           </Animated.View>

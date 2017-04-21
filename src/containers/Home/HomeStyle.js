@@ -12,6 +12,6 @@ export default StyleSheet.create({
     flex: 1,
     paddingLeft: 15,
     paddingRight: 15,
-    marginTop: 45
+    marginTop: 45,
   }
 });

@@ -34,10 +34,11 @@ export default class Login extends Component {
   };
 
   handleRegister = () => {
-    Alert.alert(
-      'Button press',
-      'Created user'
-    )
+    Actions.info();
+    // Alert.alert(
+    //   'Button press',
+    //   'Created user'
+    // )
   };
 
   unmountComponent(callback) {
@@ -106,23 +107,23 @@ export default class Login extends Component {
               <Input label="Username"
                      icon={<Icon name="user"/>}
                      value={this.state.username}
-                     onChange={this.handleChangeInput('username')}
+                     onChange={this.handleChangeInput.bind(this, 'username')}
               />
               <Input label="Email"
                      icon={<Icon name="envelope-o"/>}
                      value={this.state.email}
                      marginTop={23}
-                     onChange={this.handleChangeInput('email')}
+                     onChange={this.handleChangeInput.bind(this, 'email')}
               />
               <Input label="Password"
                      icon={<Icon name="key"/>}
                      value={this.state.password}
                      marginTop={23}
-                     onChange={this.handleChangeInput('password')}
+                     onChange={this.handleChangeInput.bind(this, 'password')}
                      secureTextEntry
               />
             </Animated.View>
-            <Animated.View style={{position: 'relative', top: this.state.animation.buttonPositionTop}}>
+            <Animated.View style={{position: 'relative', top: this.state.animation.buttonPositionTop, marginTop: 10}}>
               <Button marginTop={getPlatformValue('android',25, 38)} width={200} onPress={this.handleRegister}>
                 Create
               </Button>

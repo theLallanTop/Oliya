@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Scene, Router} from 'react-native-router-flux';
 import {BackgroundWrapper} from './components/partials';
-import {Home, Login, Register} from './containers';
+import {Home, Login, Register, Info} from './containers';
 
 const getScenceStyle = (scene) => {
   let style = {
@@ -24,6 +24,7 @@ export default class AppRouter extends Component {
           <Scene key="home" component={Home} initial hideNavBar/>
           <Scene key="login" component={Login} hideNavBar/>
           <Scene key="register" component={Register} hideNavBar/>
+          <Scene key="info" component={Info} hideNavBar/>
         </Router>
       </BackgroundWrapper>
     );

@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { View, TouchableOpacity, StyleSheet } from 'react-native';
 import { getStyleFromProps } from '../../utils';
 import { TextFont } from '../text';
-
+import { Colors, Metrics } from '../../theme';
 export default class Button extends Component {
   render() {
     const style = {
@@ -11,7 +11,7 @@ export default class Button extends Component {
     };
     return(
       <View style={{ alignItems: 'center' }}>
-        <TouchableOpacity style={style} onPress={this.props.onPress}>
+        <TouchableOpacity style={[style,{backgroundColor: 'white'}]} onPress={this.props.onPress}>
           <TextFont style={styleButton.text}>
             {this.props.children}
           </TextFont>
@@ -22,7 +22,7 @@ export default class Button extends Component {
 }
 
 Button.defaultProps = {
-  width: 179
+  width: Metrics.screenWidth - Metrics.screenWidth/6
 };
 
 Button.PropTypes = {
@@ -38,10 +38,10 @@ const styleButton = {
     paddingBottom: 16,
     paddingLeft: 47,
     paddingRight: 47,
-    backgroundColor: '#6c56b7',
-    borderRadius: 30,
+    backgroundColor: Colors.bloodOrange,
+    borderRadius: 5,
     alignItems: "stretch",
-    shadowColor: "#000000",
+    shadowColor: Colors.panther,
     shadowOpacity: 0.5,
     shadowRadius: 2,
     shadowOffset: {
@@ -50,7 +50,7 @@ const styleButton = {
     }
   },
   text: {
-    color: '#ffffff',
+    color: Colors.charcoal,
     fontSize: 18,
     fontWeight: "600",
     textAlign: "center",

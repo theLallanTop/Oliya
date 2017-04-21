@@ -66,7 +66,7 @@ export default class Login extends Component {
       <View style={loginStyle.loginContainer}>
         <Logo/>
         <Heading marginTop={16} color="#ffffff" textAlign="center">
-          {'<React Viet Nam/>'}
+          {'Oliya'}
         </Heading>
         <View style={loginStyle.formContainer}>
           <Animated.View style={{position: 'relative', left: this.state.animation.usernamePostionLeft}}>
@@ -80,12 +80,12 @@ export default class Login extends Component {
             <Input label="Password"
                    icon={<Icon name="key"/>}
                    value={this.state.password}
-                   marginTop={23}
+                   marginTop={15}
                    onChange={this.handleChangeInput.bind(this, 'password')}
                    secureTextEntry
             />
           </Animated.View>
-          <Animated.View style={{position: 'relative', top: this.state.animation.loginPositionTop}}>
+          <Animated.View style={{position: 'relative', top: this.state.animation.loginPositionTop, marginTop: 10}}>
             <Button marginTop={60} onPress={this.handePressSignIn}>
               Sign in
             </Button>
