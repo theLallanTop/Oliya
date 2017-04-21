@@ -1,57 +1,31 @@
-import React, { Component } from 'react';
-import { Home, SignIn, SignUp } from './containers';
-import { Text, View } from 'react-native';
-import { connect } from 'react-redux';
-import { Colors, Images } from './theme';
-import { Router, Scene, Actions as NavigationActions } from 'react-native-router-flux';
+import React, {Component} from 'react';
+import {Scene, Router} from 'react-native-router-flux';
+import {BackgroundWrapper} from './components/partials';
+import {Home, Login, Register} from './containers';
 
-const Styles = {
-  container: {
-    flex: 1
-  },
-  navBar: {
-    backgroundColor: Colors.background,
-  },
-  dashboardNavBar: {
-    flex:1,
-    backgroundColor: Colors.background,
-  },
-  title: {
-    color: Colors.snow
-  },
-  leftButton: {
-    tintColor: Colors.transparent
-  },
-  rightButton: {
-    color: Colors.snow
-  },
-  navTitle: {
-    color: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  dropdownOptions: {
-    marginTop: 33,
-    borderColor: '#ccc',
-    borderWidth: 2,
-    width: 60,
-    height: 30
-  },
-  logout: {
-    color: Colors.white,
-    marginLeft: 10,
-    marginTop: -5
+const getScenceStyle = (scene) => {
+  let style = {
+    backgroundColor: 'transparent'
+  };
+  if(scene.navigationState.index !== scene.scene.index){
+    style = {
+      ...style,
+      opacity: 0
+    }
   }
+  return style;
 };
 
 export default class AppRouter extends Component {
-  render() {
-    return (
-      <Router navigationBarStyle={Styles.navBar} titleStyle={Styles.navTitle} hideNavBar>
-        <Scene key="home" component={Home} title="Oliya" hideNavBar={false} />
-        <Scene key="signin" component={SignIn} title="Sign In" hideNavBar={true} initial />
-        <Scene key="signup" component={SignUp} title="Sign Up" hideNavBar={true} />
-      </Router>
+  render(){
+    return(
+      <BackgroundWrapper paddingTop={0}>
+        <Router getSceneStyle={getScenceStyle}>
+          <Scene key="home" component={Home} initial hideNavBar/>
+          <Scene key="login" component={Login} hideNavBar/>
+          <Scene key="register" component={Register} hideNavBar/>
+        </Router>
+      </BackgroundWrapper>
     );
   }
 }

@@ -1,8 +1,8 @@
 import Home from './Home';
-import SignUp from './SignUp';
-import SignIn from './SignIn';
+import Register from './Register';
+import Login from './Login';
 export {
   Home,
-  SignUp,
-  SignIn
+  Register,
+  Login
 };
